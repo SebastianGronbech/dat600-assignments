@@ -15,15 +15,8 @@ func generateRandomSlice(size int) []int {
 	return slice
 }
 
-// func BenchmarkInsertionSort(b *testing.B) {
-// 	for i := 0; i < b.N; i++ {
-// 		arr := []int{9, 5, 1, 4, 3, 8}
-// 		insertionSort(arr)
-// 	}
-// }
-
 func BenchmarkInsertionSort_RandomSizes(b *testing.B) {
-	sizes := []int{10, 100, 500, 1000, 2000}
+	sizes := []int{100, 500, 1000, 5000, 10000, 20000, 50000}
 
 	for _, size := range sizes {
 		b.Run("size="+strconv.Itoa(size), func(b *testing.B) {
