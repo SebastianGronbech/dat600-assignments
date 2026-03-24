@@ -1,0 +1,7 @@
+digraph G {
+    rankdir=LR;
+
+    s -> a [label="2", color="red", penwidth=2];
+    s -> b [label="5", color="green", penwidth=2];
+    b -> a [label="-4", color="green", penwidth=2];
+}
